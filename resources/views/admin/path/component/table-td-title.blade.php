@@ -1,0 +1,1 @@
+<td><a {{ $link->attributes->merge(['class' => 'title-link text-decoration-none text-dark']) }} > {{ $link }} </a></td>

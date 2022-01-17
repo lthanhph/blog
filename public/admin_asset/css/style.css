@@ -1,0 +1,229 @@
+/* -------------- Layout ------------- */
+/* html, body{
+    min-height: 100vh;
+} */
+#main-container{
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    position: relative;
+}
+#main-container .menu-col{
+    flex-basis: 204px;
+    width: 204px;
+}
+#main-container .content-col{
+    flex-grow: 1;
+    flex-shrink: 100;
+    padding: 20px;
+    width: min-content;
+    overflow-x: hidden;
+}
+
+
+
+/* -------------- Top Bar ------------- */
+#topbar .navbar-brand{
+    display: flex;
+    align-items: center;
+}
+#topbar .navbar-brand .h4{
+    margin-bottom: 0;
+}
+#topbar .brand-logo{
+    margin-right: 10px;
+}
+#topbar .logout{
+    background: transparent;
+    border: none;
+}
+#topbar .hamburger-btn{
+    display: none;
+    background: transparent;
+}
+
+
+
+/* -------------- Main Menu ------------- */
+#main-menu{
+    height: 100%;
+    align-items: flex-start;
+}
+#main-menu .navbar-nav{
+    width: 100%;
+}
+#main-menu .nav-item{
+    padding-left: 20px;
+}
+#main-menu i{
+    font-size: 20px;
+    margin-right: 5px;
+}
+#main-menu .nabar-link{
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* -------------- Manager ------------- */
+.manager .create{
+    margin-bottom: 20px;
+}
+.manager .create i{
+    margin-right: 5px;
+}
+.manager-table{
+    table-layout: fixed;
+}
+.manager-table td{
+    overflow-x: hidden;
+    /* overflow-y: visible; */
+}
+.manager-table .td-action{
+    text-align: center;
+    overflow: visible;
+}
+.manager-table .td-action button[data-bs-toggle="dropdown"],
+.manager-table .td-action .dropdown-item button,
+.manager-table .td-action .dropdown-item a{
+    cursor: pointer;
+}
+.manager table .td-action .dropdown-item:active button,
+.manager table .td-action .dropdown-item:active a{
+    color: #fff !important;
+}
+.manager-table .td-title a:hover{
+    text-decoration: underline !important;
+}
+.manager-table .delete-form{
+    display: inline;
+}
+.manager-table .delete-form .delete{
+    background: transparent;
+    border: none;
+}
+.manager-table .edit{
+    text-decoration: none;
+}
+.manager-table .title-link:hover{
+    text-decoration: underline !important;
+}
+.manager .table-wrapper{
+    position: relative;
+}
+.post-table, .comment-table{
+    min-width: 900px;
+}
+
+
+/* -------------- Post Create/Edit ------------- */
+#post-create-edit input[name="title"]{
+    margin-bottom: 20px;
+}
+#post-create-edit textarea[name="content"]{
+    min-height: 300px;
+}
+#post-create-edit .card{
+    margin-bottom: 20px;
+}
+#post-create-edit .thumbnail-preview img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin: 18px 0 5px 0;
+}
+#post-create-edit .tag-box .tag .remove:hover{
+    cursor: pointer;
+    color: #dc3545 !important;
+}
+#post-create-edit .category-box .card-body{
+    max-height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+
+/* -------------- User Create/Edit ------------- */
+#user-create-edit .avatar{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+#user-create-edit .avatar-wrapper{
+    height: max-content;
+    text-align: center;
+}
+
+
+
+
+/* -------------- Comment Edit ------------- */
+#comment-edit textarea{
+    min-height: 300px;
+}
+
+
+
+/* -------------- Menu Config ------------- */
+#menu-config .item-list{
+    max-height: 200px;
+    overflow-y: auto;
+}
+#menu-config .menu{
+    overflow-y: auto;
+    max-height: 400px;
+    min-height: 170px;
+}
+
+
+
+/* -------------- Loading ------------- */
+.loading{
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+    visibility: hidden;
+}
+.table-wrapper .loading .spinner-border{
+    height: 100px;
+    width: 100px;
+}
+
+
+/* -------------- Pagination ------------- */
+.admin-pagination{
+    overflow-x: auto;
+    width: 100%;
+}
+.admin-pagination .pagination{
+    width: min-content;
+    margin-left: auto;
+}
+
+
+
+@media only screen and (max-width: 767px){
+    
+    /* ------------ Layout ---------- */
+    #main-container .menu-col{
+        position: absolute;
+        height: 100%;
+        z-index: 1000;
+        left: 0;
+    }
+
+    /* ------------ Topbar ---------- */
+    #topbar .hamburger-btn{
+        display: block;
+    }
+}

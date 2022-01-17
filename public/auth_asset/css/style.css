@@ -1,0 +1,9 @@
+html, body{
+    min-height: 100%;    
+}
+.auth-layout-container{
+    min-height: 100vh;
+}
+.auth-form{
+    max-width: 400px;
+}
