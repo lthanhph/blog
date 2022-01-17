@@ -2,6 +2,15 @@
 
 use Illuminate\Support\Str;
 
+$pgsql = [
+    'url' => 'postgres://vfwilzcyznisbd:9fd0b6d258b5bbfc25e3ee630ff8284c8e232a2f62f7d6cd5dcec0e4723f9c0f@ec2-34-193-235-32.compute-1.amazonaws.com:5432/dbc0imoajpd3jo',
+    'database' => 'dbc0imoajpd3jo',
+    'host' => 'ec2-34-193-235-32.compute-1.amazonaws.com',
+    'password' => '9fd0b6d258b5bbfc25e3ee630ff8284c8e232a2f62f7d6cd5dcec0e4723f9c0f',
+    'port' => '5432',
+    'username' => 'vfwilzcyznisbd',
+];
+
 return [
 
     /*
@@ -65,12 +74,12 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'url' => env('DATABASE_URL', $pgsql['url']),
+            'host' => env('DB_HOST', $pgsql['host']),
+            'port' => env('DB_PORT', $pgsql['port']),
+            'database' => env('DB_DATABASE', $pgsql['database']),
+            'username' => env('DB_USERNAME', $pgsql['username']),
+            'password' => env('DB_PASSWORD', $pgsql['password']),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
