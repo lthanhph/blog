@@ -74,12 +74,12 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => $pgsql['url'],
-            'host' => $pgsql['host'],
-            'port' => $pgsql['port'],
-            'database' => $pgsql['database'],
-            'username' => $pgsql['username'],
-            'password' => $pgsql['password'],
+            'url' => env('DATABASE_URL', $pgsql['url']),
+            'host' => env('DB_HOST', $pgsql['host']),
+            'port' => env('DB_PORT', $pgsql['port']),
+            'database' => env('DB_DATABASE', $pgsql['database']),
+            'username' => env('DB_USERNAME', $pgsql['username']),
+            'password' => env('DB_PASSWORD', $pgsql['password']),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
