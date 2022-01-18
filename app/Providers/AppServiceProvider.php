@@ -28,12 +28,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        $image = new Image();
-        View::share('placeholder', $image->placeholder);
+        // $image = new Image();
+        // View::share('placeholder', $image->placeholder);
         
         // $navigation = Menu::where('position', config('menu.position.nav'))->first();
         // View::share('navigation', $navigation);
 
-        Paginator::useBootstrap();
+        // Paginator::useBootstrap();
     }
 }
