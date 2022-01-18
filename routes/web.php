@@ -31,11 +31,11 @@ use App\Models\Post;
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
 
-// $data_home =  [
-//     'post' => Post::limit(5)->get(), 
-//     'total' => Post::count(),
-//     'carousel_items' => Post::limit(3)->get(),
-// ];
+$data_home =  [
+    // 'post' => Post::limit(5)->get(), 
+    'total' => Post::count(),
+    // 'carousel_items' => Post::limit(3)->get(),
+];
 Route::view('/', 'public.index', $data_home)->name('home');
 Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
 Route::post('/post/loadmore/', [PostController::class, 'loadMore'])->name('post.loadmore');
