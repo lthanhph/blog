@@ -32,9 +32,9 @@ use App\Models\Post;
 // })->middleware(['auth'])->name('dashboard');
 
 $data_home =  [
-    // 'post' => Post::limit(5)->get(), 
+    'post' => Post::limit(5)->get(), 
     'total' => Post::count(),
-    // 'carousel_items' => Post::limit(3)->get(),
+    'carousel_items' => Post::limit(3)->get(),
 ];
 Route::view('/', 'public.index', $data_home)->name('home');
 Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
