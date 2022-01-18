@@ -2694,7 +2694,7 @@
             "require": {
                 "php": "^7.3 || ^8",
                 "symfony/polyfill-php81": "^1.23",
-                "fakerphp/faker": "^1.5",
+                "fakerphp/faker": "^1.5"
             },
             "require-dev": {
                 "captainhook/captainhook": "^5.3",
