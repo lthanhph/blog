@@ -9,8 +9,8 @@
         </button>
         <div class="navigation collapse navbar-collapse" id="main-menu">
             <ul class="navbar-nav">
-                @if (!empty($navigation))
-                    @foreach ($navigation->menuItem()->get() as $item)
+                @if (!empty($menu))
+                    @foreach ($menu->menuItem()->get() as $item)
                         <li class="nav-item mx-2">
                             <a href="{{ $item->url }}" class="nav-link text-light text-capitalize border-bottom">{{ $item->title }}</a>
                         </li>

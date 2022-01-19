@@ -14,7 +14,7 @@ class MenuController extends Controller
     public function showConfig()
     {
         $menu = Menu::where('position', 'navigation')->first();
-        $items = $menu->getItems();
+        $items = $menu->menuItem()->get();
         return view('admin.path.menu-config', [
             'post' => Post::all(),
             'category' => Term::whereRelation('taxonomy', 'name', 'category')->get(),
@@ -49,7 +49,7 @@ class MenuController extends Controller
 
     public function destroyItem($id)
     {
-        $items = Menu::find($id)->getItems();
+        $items = Menu::find($id)->menuItem()->get();
         if ($items->isNotEmpty()) {
             foreach ($items as $item) {
                 MenuItem::destroy($item->id);
