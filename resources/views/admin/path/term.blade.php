@@ -1,7 +1,7 @@
 @extends('admin.layout.main')
 
 @section('main-content')
-<div class="manager row">
+<div class="manager row h-100">
     <div class="col-xl-4 col-lg-5">
         <div class="card mb-4">
             <div class="card-body">

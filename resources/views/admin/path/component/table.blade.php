@@ -1,8 +1,8 @@
-<div class="position-relative w-100 h-100">
+<div class="position-relative w-100">
     <div class="loading">
         <div class="spinner-border"></div>
     </div>
-    <div class="table-responsive">
+    <div class="fit-content">
         <table {{ $attributes->merge(['class' => $elementName.'-table manager-table table table-bordered table-hover table-sm']) }} >
             <thead class="table-dark">
                 <tr>
@@ -14,6 +14,6 @@
                 {{ $body }}
             </tbody>
         </table>
+        {{ $pagination }}
     </div>
-    {{ $pagination }}
 </div>

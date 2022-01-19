@@ -17,7 +17,7 @@
     flex-shrink: 100;
     padding: 20px;
     width: min-content;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 
@@ -111,6 +111,10 @@
 }
 .manager .table-wrapper{
     position: relative;
+    overflow-x: auto;
+}
+.manager .table-wrapper .fit-content{
+    width: fit-content;
 }
 .post-table, .comment-table{
     min-width: 900px;
@@ -202,12 +206,12 @@
 
 /* -------------- Pagination ------------- */
 .admin-pagination{
-    overflow-x: auto;
-    width: 100%;
+    /* overflow-x: auto;
+    width: 100%; */
 }
 .admin-pagination .pagination{
-    width: min-content;
-    margin-left: auto;
+    /* width: min-content;
+    margin-left: auto; */
 }
 
 
