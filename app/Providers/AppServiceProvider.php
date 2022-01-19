@@ -34,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
 
         Paginator::useBootstrap();
 
+        // force https request on testing env
         if($this->app->environment('testing')) {
             // URL::forceScheme('https');
             $this->app['request']->server->set('HTTPS','on');
