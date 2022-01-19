@@ -16,7 +16,7 @@
                 </x-table-td-title>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->role->name }}</td>
-                <x-table-action :index="$index" :route-edit="$route_edit" :route-destroy="$route_destroy" />
+                <x-table-action :index="$index" route-show="" :route-edit="$route_edit" :route-destroy="$route_destroy" />
             </tr>
         @endforeach
     </x-slot>

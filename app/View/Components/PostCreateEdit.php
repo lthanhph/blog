@@ -18,7 +18,7 @@ class PostCreateEdit extends Component
      *
      * @return void
      */
-    public function __construct($post = null, $route, $method)
+    public function __construct($post, $route, $method)
     {
         //
         $this->post = $post;

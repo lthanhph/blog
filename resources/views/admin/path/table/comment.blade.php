@@ -20,7 +20,7 @@
                 <td>{{ $comment->content }}</td>
                 <td>{{ $comment->parent_name }}</td>
                 <td>{{ $comment->post->title }}</td>
-                <x-table-action :index="$index" :route-edit="$route_edit" :route-destroy="$route_destroy" />
+                <x-table-action :index="$index" route-show="" :route-edit="$route_edit" :route-destroy="$route_destroy" />
             </tr>
         @endforeach 
     </x-slot>

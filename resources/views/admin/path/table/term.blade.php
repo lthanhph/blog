@@ -14,7 +14,7 @@
                     <x-slot name="link" href="{{ $route_edit }}">{{ $term->title }}</x-slot>
                 </x-table-td-title>
                 <td>{{ $term->description }}</td>
-                <x-table-action :index="$index" :route-edit="$route_edit" :route-destroy="$route_destroy"/>
+                <x-table-action :index="$index" route-show="" :route-edit="$route_edit" :route-destroy="$route_destroy"/>
             </tr>
         @endforeach
     </x-slot>
