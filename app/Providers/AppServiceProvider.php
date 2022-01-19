@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\URL;
 use App\Models\Image;
 use App\Models\Menu;
 use Illuminate\Pagination\Paginator;
@@ -32,5 +33,9 @@ class AppServiceProvider extends ServiceProvider
         View::share('placeholder', $image->placeholder);
 
         Paginator::useBootstrap();
+
+        if($this->app->environment('testing')) {
+            URL::forceScheme('https');
+        }
     }
 }
