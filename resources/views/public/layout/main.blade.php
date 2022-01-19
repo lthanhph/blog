@@ -13,7 +13,8 @@
 </head>
 <body>
     <header>
-        @include('public.path.menu')
+        {{-- Nav Menu --}}
+        <x-nav-menu />
     </header>
     <div id="main_container">
         @yield('main-content')

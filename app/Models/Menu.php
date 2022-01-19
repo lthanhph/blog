@@ -19,9 +19,9 @@ class Menu extends Model
         return $this->hasMany(MenuItem::class);
     }
 
-    public function getItems()
-    {
-        $items = $this->menuItem()->where('menu_id', $this->id)->get();
-        return $items;
-    }
+    // public function getItems()
+    // {
+    //     $items = $this->menuItem()->where('menu_id', $this->id)->get();
+    //     return $items;
+    // }
 }

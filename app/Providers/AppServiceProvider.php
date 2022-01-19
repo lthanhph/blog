@@ -30,9 +30,6 @@ class AppServiceProvider extends ServiceProvider
         //
         $image = new Image();
         View::share('placeholder', $image->placeholder);
-        
-        $navigation = Menu::where('position', config('menu.position.nav'))->first();
-        View::share('navigation', $navigation);
 
         Paginator::useBootstrap();
     }

@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\TermController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PaginationController;
 use App\Models\Comment;
 use App\Models\Menu;
@@ -31,12 +32,7 @@ use App\Models\Post;
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
 
-$data_home =  [
-    'post' => Post::limit(5)->get(), 
-    'total' => Post::count(),
-    'carousel_items' => Post::limit(3)->get(),
-];
-Route::view('/', 'public.index', $data_home)->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/post/{post}', [PostController::class, 'show'])->name('post.show');
 Route::post('/post/loadmore/', [PostController::class, 'loadMore'])->name('post.loadmore');
 Route::post('comment/store', [CommentController::class, 'store'])->name('comment.store');

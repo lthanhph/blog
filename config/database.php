@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Str;
 
-$pgsql = parse_url(getenv("DATABASE_URL"));
+$pgsql = ['host' => '', 'port' => '', 'user' => '', 'pass' => '', 'part' => ''];
+$get_db_url = parse_url(getenv("DATABASE_URL"));
+$pgsql = !empty($get_db_url['path']) ? $get_db_url : $pgsql;
 
 return [
 
@@ -70,7 +72,7 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', $pgsql['host']),
             'port' => env('DB_PORT', $pgsql['port']),
-            'database' => env('DB_DATABASE', ltrim($pgsql['path'], '/')),
+            'database' => env('DB_DATABASE', ltrim($pgsql['part'], '/')),
             'username' => env('DB_USERNAME', $pgsql['user']),
             'password' => env('DB_PASSWORD', $pgsql['pass']),
             'charset' => 'utf8',
